@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import classes from './Counter.module.css';
-import { counterActions } from './../store/index';
+import { counterActions } from './../store/counter';
 
 const Counter = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Counter = () => {
     dispatch(counterActions.decrese(5))
   };
   const resetHandler = () => {
-    dispatch(counterActions.reset)
+    dispatch(counterActions.reset())
   };
 
 
